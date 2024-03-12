@@ -71,3 +71,20 @@ leo run make_move 2u8 2u8 2u8 "{ r1: { c1: 1u8, c2: 0u8, c3: 0u8 }, r2: { c1: 0u
 | 0 | 2 | 0 |
 | 0 | 0 | 0 |
 # tictactoe
+
+leo function shonya7(input_array):
+    // Initialize variables
+    max_value = -INFINITY
+    max_index = -1
+    
+    // Iterate over the input array
+    for i from 0 to length(input_array) - 1 do:
+        // Check if the current element is greater than the maximum value
+        if input_array[i] > max_value then:
+            // Update the maximum value and index
+            max_value = input_array[i]
+            max_index = i
+    
+    // Return the index of the maximum value
+    return max_index
+
